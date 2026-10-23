@@ -5,4 +5,4 @@ It is a yena plugin (`runtime: "node"`, `entry: src/index.ts`) with no commands.
 
 The hub holds what every agent can inherit: instructions (`CLAUDE.md`, `SOUL.md`, …), subagents (`agents/*.md`) and skills (`skills/<name>/SKILL.md`). Agent modules depend on `md` and link to the hub instead of keeping their own copies; for example the `claude` module makes `<YENA_DATA>/claude/md` a symlink to `../md`, and its `config/agents` and `config/skills` point into it.
 
-Code: `src/hub.ts` (`hubDir`, `ensureHub`, `HUB_DIRS`).
+Code: `src/hub.ts` (`hubDir`, `ensureHub`, `HUB_DIRS`). Public entry for other modules: `src/public.ts` (`hubDirFor(moduleDataDir)`, `ensureHub`, `HUB_DIRS`); other modules never build the hub path themselves.
