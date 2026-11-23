@@ -1,6 +1,6 @@
 {
 	"name": "md",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"description": "Central hub of md files (instructions, agents, skills) shared by yena's agents",
 	"runtime": "node",
 	"entry": "src/index.ts",
